@@ -13,16 +13,16 @@
 // Task 2-2
 // Напиши скрипт для отображения часов и минут в консоли браузера в виде строки формата "14 ч. 26 мин.".
 // Если значение переменной minutes равно 0, то выводи строку "14 ч.", без минут.
-const hours = 13;
-const minutes = 35;
-let timestring;
+// const hours = 13;
+// const minutes = 35;
+// let timestring;
 
-if (minutes > 0) {
-    timestring = `${hours} год. ${minutes} хв.`;
-} else {
-    timestring = `${hours} год.`;
-}
-console.log(timestring);
+// if (minutes > 0) {
+//     timestring = `${hours} год. ${minutes} хв.`;
+// } else {
+//     timestring = `${hours} год.`;
+// }
+// console.log(timestring);
 
 // Task 2-3
 // Напиши скрипт, который выводит в консоль строку "Это положительное число", если в prompt пользователь ввел число больше нуля.
@@ -89,3 +89,74 @@ console.log(link2);
 // больше либо равно 17 и меньше либо равно 24, выводи строку "Expires"
 // больше 24 , выводи строку "Overdue"
 const hours = 10;
+
+
+// Test autocheck 41
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+    addPotion(newPotion) {
+        
+        let a = false;
+        for (const potion of this.potions) {
+           
+            if (potion.name === newPotion.name) {
+                a = true;
+          }
+
+      }
+    if (a) {
+      return `Error! Potion ${newPotion} is already in your inventory!`;
+    }
+
+     this.potions.push(newPotion);
+  },
+    removePotion(potionName) {
+        let potionIndex = -1;
+        for (i = 0; i < this.potions.length; i += 1){
+            if (this.potions[i].name === potionName) {
+                potionIndex = i;
+                break
+}
+        }
+    const potionIndex1 = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+    updatePotionName(oldName, newName) {
+      let potionIndex = -1;
+        for (i = 0; i < this.potions.length; i += 1){
+            if (this.potions[i].name === oldName) {
+                potionIndex = i;
+                break
+}
+        }
+    // const potionIndex = this.potions.indexOf(oldName);
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+        console.log(this.potions[potionIndex]);
+        this.potions[potionIndex].name = newName;
+    // this.potions.splice(potionIndex, 1, newName);
+  },
+  // Change code above this line
+};
+console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+console.log(atTheOldToad.getPotions());
