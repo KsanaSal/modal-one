@@ -88,7 +88,34 @@ console.log(link2);
 // меньше 17, выводи строку "Pending"
 // больше либо равно 17 и меньше либо равно 24, выводи строку "Expires"
 // больше 24 , выводи строку "Overdue"
-const hours = 10;
+const hours = 17;
+if (hours < 17) {
+  console.log("Pending");
+} else if (hours >= 17 && hours <= 24) {
+  console.log("Expires");
+} else {
+  console.log("Overdue");
+}
+
+const task_2_8 = (h) => {
+
+  if (h < 17) {
+  return "Pending";
+} else if (h >= 17 && h <= 24) {
+  return "Expires";
+}
+  return "Overdue";
+}
+console.log(task_2_8(25));
+
+// Task 2-9
+// Напиши скрипт для отображения времени дедлайна сдачи проекта. Используй конструкцию if...else.
+// Eсли до дедлайна 0 дней - выведи строку "Сегодня"
+// Eсли до дедлайна 1 день - выведи строку "Завтра"
+// Eсли до дедлайна 2 дня - выведи строку "Послезавтра"
+// Eсли до дедлайна 3+ дней - выведи строку "Дата в будущем"
+const daysUntilDeadline = 5;
+
 
 
 // Test autocheck 41
@@ -160,3 +187,5 @@ console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
 // console.log(atTheOldToad.removePotion("Dragon breath"));
 console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
 console.log(atTheOldToad.getPotions());
+
+
