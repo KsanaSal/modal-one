@@ -114,8 +114,84 @@ console.log(task_2_8(25));
 // Eсли до дедлайна 1 день - выведи строку "Завтра"
 // Eсли до дедлайна 2 дня - выведи строку "Послезавтра"
 // Eсли до дедлайна 3+ дней - выведи строку "Дата в будущем"
-const daysUntilDeadline = 5;
+// const daysUntilDeadline = 5;
+const task_2_9 = (d) => {
+if (d === 0) {
+  return "Сьгодні";
+} else if (d === 1) {
+  return "Завтра";
+} else if (d === 2) {
+  return "Післязавтра";
+} else {
+  return "Дата в майбутньому";
+}}
+console.log(task_2_9(1));
 
+// Task 2-10
+// Выполни рефакторинг кода задачи номер 5 используя switch.
+const daysUntilDeadline = 2;
+let mesage;
+
+// if (daysUntilDeadline === 0) {
+//   console.log('Сегодня');
+// } else if (daysUntilDeadline === 1) {
+//   console.log('Завтра');
+// } else if (daysUntilDeadline === 2) {
+//   console.log('Послезавтра');
+// } else {
+//   console.log('Дата в будущем');
+// }
+
+switch (daysUntilDeadline) {
+  case 0:
+    mesage = 'Сегодня';
+    break;
+  case 1:
+    mesage = 'Завтра';
+    break;
+  case 2:
+    mesage = 'Послезавтра';
+    break;
+  default: mesage = 'Дата в будущем';
+}
+console.log(mesage);
+
+
+// Task 2-11
+// Напиши цикл for который выводит в консоль браузера числа по возрастанию от min до max, но только если число кратное 5.
+// const max = 100;
+// const min = 20;
+
+// for (let i = min; i <= max; i += 1){
+//   if (i % 5 === 0) {
+//     console.log(i);
+//   }
+  
+// }
+// console.log("RGTHYJH");
+
+// Task 2-12
+// Напиши скрипт, который будет спрашивать логин с помощью prompt и логировать результат в консоль браузера.
+// Если посетитель вводит "Админ", то prompt запрашивает пароль
+// Если ничего не введено или нажата клавиша Esc - вывести строку "Отменено"
+// В противном случае вывести строку "Я вас не знаю"
+// Пароль проверять так:
+// Если введён пароль "Я админ", то вывести строку "Здравствуйте!"
+// Иначе выводить строку "Неверный пароль"
+// const login = prompt("Введіть логін");
+// console.log(login);
+// if (login === "Адмін") {
+//   const password = prompt("Введіть пароль");
+//   if (password === "123") {
+//     alert("Hello");
+//   } else {
+//     alert("Невірний пароль");
+//   }
+// } else if (!login){
+//   alert("Відміна");
+// } else {
+//   alert("Я вас незнаю");
+// }
 
 
 // Test autocheck 41
@@ -180,12 +256,12 @@ const atTheOldToad = {
   },
   // Change code above this line
 };
-console.log(atTheOldToad.getPotions());
-console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
-console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
-// console.log(atTheOldToad.removePotion("Dragon breath"));
-// console.log(atTheOldToad.removePotion("Dragon breath"));
-console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
-console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// // console.log(atTheOldToad.removePotion("Dragon breath"));
+// // console.log(atTheOldToad.removePotion("Dragon breath"));
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+// console.log(atTheOldToad.getPotions());
 
 
