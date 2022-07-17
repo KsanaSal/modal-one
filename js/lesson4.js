@@ -80,3 +80,16 @@ console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
 // addCourse(name) - добавляет курс в конец коллекции
 // removeCourse(name) - удаляет курс из коллекции
 // updateCourse(oldName, newName) - изменяет имя на новое
+
+
+
+const saveBtn = document.querySelector('.editor button[data-action="save"]');
+const closeBtn = document.querySelector('.editor button[data-action="close"]');
+
+console.log(saveBtn.dataset.action); //save
+console.log(closeBtn.dataset.action); //close
+
+const dishes = document.querySelectorAll(".dishes > li");
+dishes.forEach((dish) => {
+  console.log(dish.dataset.id);
+});
